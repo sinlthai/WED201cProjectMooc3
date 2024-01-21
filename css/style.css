@@ -1,74 +1,85 @@
-/* CSSのコメント */
 body {
-    /* 背景色の設定 */
-    background-color: #b09090;
-}
-
-h1 {
-    /* 中央揃え、フォント指定、フォントサイズ指定 */
+    background-color: #dccaca;
+  }
+  
+  h1 {
     text-align: center;
     font-family: Arial, sans-serif;
     font-size: 32px;
-}
-
-a {
-    /* リンクのスタイル */
+  }
+  
+  a {
     color: #000;
     text-decoration: none;
     font-family: Arial, sans-serif;
-}
-
-p {
-    /* 段落のスタイル */
+  }
+  
+  p {
     font-size: 25px;
     font-family: Arial, sans-serif;
-}
-
-img {
-    /* 画像の横幅100% */
+  }
+  
+  img {
     width: 100%;
-}
-
-p {
-    /* 段落中央揃え */
+  }
+  
+  p {
     text-align: center;
-}
-
-div img {
-    /* 画像のサイズと位置指定 */
+  }
+  
+  div img {
     width: 150px;
     height: 150px;
     display: block;
     margin: auto;
-}
-
-div {
-    /* divのスタイル */
+    border-radius: 50%;
+  }
+  
+  div {
     display: inline-block;
     width: 24%;
     margin: 5px;
     padding: 2px;
-}
-
-/* メディアクエリ #1 */
-@media screen and (min-width: 772px) and (max-width: 997px) {
+  }
+  
+  @media screen and (min-width: 772px) {
     div {
-        /* メディアクエリ1でのスタイル変更 */
-        width: 45%;
-        max-height: 30vh;
-        display: inline-block;
-        margin: 5px;
-        padding: 2px;
+      width: 45%;
+      max-height: 30vh;
+      display: inline-block;
+      margin: 5px;
+      padding: 2px;
     }
-}
-
-/* メディアクエリ #2 */
-@media screen and (min-width: 998px) {
+  }
+  
+  @media screen and (min-width: 992px) {
     div {
-        /* メディアクエリ2でのスタイル変更 */
-        width: 30%;
-        display: inline-block;
-        margin: 5px;
-        padding: 2px;
+      width: 30%;
+      display: inline-block;
+      margin: 5px;
+      padding: 2px;
     }
-}
+  
+    div:last-child {
+      grid-column: span 2;
+    }
+  
+    div img {
+      border-radius: 0;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    div {
+      background-color: #734949;
+      color: #fff;
+      border-color: #000;
+    }
+  }
+  
